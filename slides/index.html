@@ -1,49 +1,289 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>Accessibility Isn't Inaccessible!</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/dylan.css" id="theme">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+	 crossorigin="anonymous">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai-pro.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+	<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+
+				<!-- Introduction -->
+				<section>
+					<div class="grid-rows">
+						<div>
+							<img class="circle-img med-img" src="resources/me-500px.jpg" alt="" />
+						</div>
+						<h1>Dylan Sheffer</h1>
+						<ul class="flex-row content-center social">
+							<li><i class="fab fa-twitter"></i> @DylanSheffer</li>
+							<li><i class="fab fa-twitch"></i> DylanSheffer</li>
+							<li><i class="fab fa-slack"></i> DylanSheffer</li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- Title -->
+				<section>
+					<div class="">
+						<h1>Accessibility Isn't Inaccessible!</h1>
+						<p>A dive into how web accessibility <br/> doesn't have to be so confusing!</p>
+						<span class="large-text">🎉♿🎉</span>
+					</div>
+				</section>
+
+				<section>
+					<section>
+						<div>
+							<h1>What is Accessibility?</h1>
+						</div>
+					</section>
+					<section>
+						<div>
+							<blockquote>"The inclusive practice of <div class="fragment highlight-blue">removing barriers</div> that prevent interaction with, or access to websites, by people with disabilities.
+							When sites are correctly designed, developed and edited, all users have equal access to information and functionality."</blockquote>
+							<cite><a href="https://www.disabled-world.com/disability/accessibility/websitedesign/">Disabled World - <i>Accessible Website Design Information</i></a></cite>
+							<aside class="notes">
+								This definition is pretty good, but highlights a mentality I've noticed in the a11y world.
+
+								(click)
+
+								I'm not a fan of saying its the practice of removing barriers because it creates an us against them mentality.
+
+								I believe the real root of web accessibility problems doesn't come from people not caring or purposefully putting up barriers.
+
+								It's caused by people being generally unaware or by people who have been led to believe that it's too complicated or too insignificant to be concerned about.
+							</aside>
+						</div>
+					</section>
+					<section>
+						<div>
+							<blockquote>
+								"The practice of developing robust websites, so that people of all walks of life may have equal access to its information and functionality."
+							</blockquote>
+							<cite>- Dylan Sheffer 😉</cite>
+						</div>
+						<aside class="notes">
+							If I were to rephrase it.
+						</aside>
+					</section>
+				</section>
+
+				<!-- Serious Section / Disclaimer -->
+				<!-- "I generally like to keep my talks light, but we need to understand why this is such an important part of our job as developers" -->
+				<!-- "This isn't about the latest development tool that saves 2 key strokes. This is about ensuring that every-day people have the same freedoms as others" -->
+				<section>
+					<section>
+						<h1>RealTalk</h1>
+					</section>
+					<section>
+						<p class="large-text ">It is critical we do this right</p>
+						<!-- Why it is critical we do this right -->
+					</section>
+					<section>
+						<blockquote>
+							 "Yes. [The Internet is] an essential tool. And, literally, a lifeline for many disabled people... Many disabled people have to spend long hours alone. Voice-activated computers are a means of communication
+							that can prevent a sense of isolation."
+						</blockquote>
+						<cite>Christopher Reeve</cite>
+					</section>
+				</section>
+
+				<!-- Common Confusions -->
+				<section>
+					<section>
+							<h1>Common Confusions</h1>
+							<div>
+								<img class="" src="./resources/confused-dogs.webp" alt="confused puppies">
+							</div>
+							<p class="large-text">🤷‍🤔🤦‍</p>
+					</section>
+					<section>
+						<h1>WTF is A11y?!?</h1>
+						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+					</section>
+					<section>
+						<h1>WCAG???</h1>
+						<p>That's it, time to go back up.</p>
+						<br>
+						<h2>A | AA | AAA?!?</h2>
+					</section>
+				</section>
+
+				<section>
+					<h1>Slides</h1>
+					<p>
+						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="https://slides.com"
+						 target="_blank">https://slides.com</a>.
+					</p>
+				</section>
+
+				<section>
+					<h1>Point of View</h1>
+					<p>
+						Press <strong>ESC</strong> to enter the slide overview.
+					</p>
+					<p>
+						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt
+						+ click anywhere to zoom back out.
+					</p>
+				</section>
+
+				<section>
+					<h1>Touch Optimized</h1>
+					<p>
+						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
+					</p>
+				</section>
+				<section data-markdown>
+					<pre>
+					<code data-javascript data-trim data-noescape>
+						(function( root, factory ) {
+							if (typeof define === 'function' && define.amd) {
+								root.marked = require( './marked' );
+								root.RevealMarkdown = factory( root.marked );
+								root.RevealMarkdown.initialize();
+							} else if( typeof exports === 'object' ) {
+								module.exports = factory( require( './marked' ) );
+							} else {
+								// Browser globals (root is window)
+								root.RevealMarkdown = factory( root.marked );
+								root.RevealMarkdown.initialize();
+							}
+						}
+					</code>
+									</pre>
+					<!-- <script type="text/template">
+										## Markdown support
+
+										Write content using inline or external Markdown.
+										Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+
+										```
+										<section data-markdown>
+										  ## Markdown support
+
+										  Write content using inline or external Markdown.
+										  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+										</section>
+										```
+									</script> -->
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h1>Fragments</h1>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+					<section>
+						<h1>Fragment Styles</h1>
+						<p>There's different types of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p>
+							<span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
+							<span style="display: inline-block;" class="fragment fade-up">up, </span>
+							<span style="display: inline-block;" class="fragment fade-down">down, </span>
+							<span style="display: inline-block;" class="fragment fade-left">left</span>
+						</p>
+						<p class="fragment fade-in-then-out">fade-in-then-out</p>
+						<p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
+						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span
+							 class="fragment highlight-green">green</span></p>
+					</section>
+				</section>
+
+				<section id="transitions">
+					<h1>Transition Styles</h1>
+					<p>
+						You can select from different transitions, like: <br>
+						<a href="?transition=none#/transitions">None</a> -
+						<a href="?transition=fade#/transitions">Fade</a> -
+						<a href="?transition=slide#/transitions">Slide</a> -
+						<a href="?transition=convex#/transitions">Convex</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a>
+					</p>
+				</section>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
+
+			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				// The "normal" size of the presentation, aspect ratio will be preserved
+				// when the presentation is scaled to fit different resolutions. Can be
+				// specified using percentage units.
+				width: "100%",
+				height: "100%",
+				// Factor of the display size that should remain empty around the content
+				margin: 0.1,
+
+				// Bounds for smallest/largest possible scale to apply to content
+				// minScale: 1,
+				// maxScale: 1,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
 		</script>
-	</body>
+</body>
+
 </html>
