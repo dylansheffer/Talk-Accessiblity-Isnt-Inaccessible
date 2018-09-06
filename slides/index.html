@@ -74,53 +74,55 @@
 					</section>
 					<section>
 						<div>
-							<blockquote>"The inclusive practice of <div class="fragment highlight-blue">removing barriers</div> that prevent interaction with, or access to websites, by people with disabilities.
-							When sites are correctly designed, developed and edited, all users have equal access to information and functionality."</blockquote>
+							<blockquote>"The inclusive practice of removing barriers that prevent interaction with, or access to websites, by people with disabilities. <br /><br />
+							When sites are correctly designed, developed and edited, <strong>all</strong> users have equal access to information and functionality."</blockquote>
 							<cite><a href="https://www.disabled-world.com/disability/accessibility/websitedesign/">Disabled World - <i>Accessible Website Design Information</i></a></cite>
 							<aside class="notes">
-								This definition is pretty good, but highlights a mentality I've noticed in the a11y world.
 
-								(click)
-
-								I'm not a fan of saying its the practice of removing barriers because it creates an us against them mentality.
-
-								I believe the real root of web accessibility problems doesn't come from people not caring or purposefully putting up barriers.
-
-								It's caused by people being generally unaware or by people who have been led to believe that it's too complicated or too insignificant to be concerned about.
 							</aside>
 						</div>
-					</section>
-					<section>
-						<div>
-							<blockquote>
-								"The practice of developing robust websites, so that people of all walks of life may have equal access to its information and functionality."
-							</blockquote>
-							<cite>- Dylan Sheffer 😉</cite>
-						</div>
-						<aside class="notes">
-							If I were to rephrase it.
-						</aside>
 					</section>
 				</section>
 
 				<!-- Serious Section / Disclaimer -->
-				<!-- "I generally like to keep my talks light, but we need to understand why this is such an important part of our job as developers" -->
-				<!-- "This isn't about the latest development tool that saves 2 key strokes. This is about ensuring that every-day people have the same freedoms as others" -->
 				<section>
 					<section>
 						<h1>RealTalk</h1>
+						<aside class="notes">
+							I generally like to keep my talks light, but before I continue we need to understand why this is such an important part of our job as developers.
+						</aside>
 					</section>
 					<section>
 						<p class="large-text ">It is critical we do this right</p>
-						<!-- Why it is critical we do this right -->
+						<aside class="notes">
+							Accessibility isn't like keeping up with the latest development tools where it's nice to know, but can be shrugged away.
+
+							This is about ensuring that all people have the same access to information regardless of ability.
+
+							It is our shared responsibility that we preserve this fundamental human right to information and expression.
+
+							And if this sounds overly dramatic listen this quote.
+						</aside>
 					</section>
 					<section>
-						<blockquote>
-							 "Yes. [The Internet is] an essential tool. And, literally, a lifeline for many disabled people... Many disabled people have to spend long hours alone. Voice-activated computers are a means of communication
-							that can prevent a sense of isolation."
-						</blockquote>
-						<cite>Christopher Reeve</cite>
+						<div>
+							<blockquote>
+								 "Yes. [The Internet is] an essential tool. And, literally, a lifeline for many disabled people... Many disabled people have to spend long hours alone. Voice-activated computers are a means of communication
+								that can prevent a sense of isolation."
+							</blockquote>
+							<cite>- Christopher Reeve</cite>
+						</div>
+						<aside class="notes">
+							For those who may not know, Christopher Reeve is best known for his role as Superman. Later in life, he was thrown from his horse and became quadriplegic due to his spinal cord injuries.
+
+							If for any reason at all you ensure your work is accessible, remember, like Mr. Reeve, we are all an accident or a few years of age away from needing assistive technology.
+						</aside>
 					</section>
+				</section>
+
+				<section>
+					<p>(Comedic Reset)</p>
+					<img style="width: 500px;" src="./resources/guy-noodle.gif" alt="guy fieri eating a noodle in reverse" />
 				</section>
 
 				<!-- Common Confusions -->
@@ -134,13 +136,67 @@
 					</section>
 					<section>
 						<h1>WTF is A11y?!?</h1>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<p class="fragment"><em>A11y</em> is a numeronym that stands for accessibility.</p>
+						<aside class="notes">
+							A11y is a numeronym that stands for accessibility. Which leads to my next question...
+						</aside>
 					</section>
 					<section>
-						<h1>WCAG???</h1>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<h2>A | AA | AAA?!?</h2>
+						<h1>WTF is a Numeronym?!?</h1>
+						<p class="fragment"><em>Numeronym</em> is where you use numbers to represent the middle of a long word</p>
+						<p class="fragment">A ... 11 letters ... y</p>
+						<div class="fragment flex-column content-center">
+							<img style="width:300px;" src="./resources/a11y.png" alt="diagram of how a11y the numeronym works">
+							<p class="small-text">Image provided by <a href="http://mds.is/a11y">MDS</a></p>
+						</div>
+					</section>
+					<section>
+						<h2>Other examples</h2>
+						<ul>
+							<li class="fragment">Internationalization (I18n)</li>
+							<li class="fragment">Localization (L10n)</li>
+						</ul>
+						<div>
+							<img src="./resources/more-you-know.webp" alt="The more you know rainbow" class="fragment">
+						</div>
+					</section>
+					<section>
+						<h1>WCAG, 508, Lawsuits?</h1>
+						<div class="fragment">
+							<img style="width: 700px;" src="./resources/oh-my.webp" alt="George Takai saying 'Oh My'">
+						</div>
+						<aside class="notes">
+							I'm not going to go into super detail about these topics, but...
+						</aside>
+					</section>
+					<section>
+						<h2>WCAG</h2>
+						<p class="fragment"><strong>Web Content Accessibility Guidelines</strong></p>
+						<p class="fragment">The official guidelines published by the W3C on how to make the web accessible.</p>
+						<div class="fragment">
+							<div><img src="resources/webaim.png" alt="Web AIM Logo"></div>
+							<p><a href="https://webaim.org/standards/wcag/checklist">Web AIM's WCAG Checklist</a></p>
+						</div>
+						<aside class="notes">
+							The WCAG is a dense read and I think it's one of the reasons why developers are intimidated by accessibility.
+
+							The good news is that the website webaim.org has created a more digestible checklist of the WCAG.
+						</aside>
+					</section>
+					<section>
+						<h3>WCAG A, AA, AAA</h3>
+						<p class="fragment">The <em>As</em> are a levels of conformance to the WCAG</p>
+						<aside class="notes">
+							The way I think about the levels of conformance is.
+
+							a- shitty manual transmission junker
+							aa- typical sedan
+							aaa - humvee
+						</aside>
+					</section>
+					<section>
+						<h4>A</h4>
+						<p class="fragment">The very minimum needed, so that a website is usable for people with assistive technology</p>
 					</section>
 				</section>
 

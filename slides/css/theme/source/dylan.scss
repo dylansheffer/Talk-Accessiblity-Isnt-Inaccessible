@@ -142,6 +142,10 @@ section.has-light-background {
 		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 	}
 
+	.small-text {
+		font-size: 0.5em;
+	}
+
 	.large-text {
 		font-size: 1.5em;
 	}
