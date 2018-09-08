@@ -40,6 +40,9 @@ section.has-light-background, section.has-light-background h1, section.has-light
   border-radius: 24px;
   width: 80%; }
 
+.reveal img {
+  max-width: 700px; }
+
 .reveal .grid-columns {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); }
@@ -60,6 +63,9 @@ section.has-light-background, section.has-light-background h1, section.has-light
   align-items: center;
   justify-content: center; }
 
+.reveal .justify-space-around {
+  justify-content: space-around; }
+
 .reveal .center {
   align-self: center;
   justify-self: center; }
@@ -77,14 +83,37 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal .small-text {
   font-size: 0.5em; }
 
+.reveal .medium-text {
+  font-size: 0.8em; }
+
 .reveal .large-text {
   font-size: 1.5em; }
+
+.reveal .small-img {
+  width: 300px; }
+
+.reveal .medium-img {
+  max-width: 500px;
+  max-height: 350px; }
+
+.reveal .large-img {
+  width: 700px; }
 
 .reveal .social {
   margin: 0;
   justify-content: space-around;
   list-style-type: none;
   width: 100%; }
+
+.reveal .slide__pillars-of-a11y .pillars {
+  width: 100%;
+  justify-content: space-around;
+  list-style: none;
+  margin: 30px 0; }
+
+.reveal .slide__pillars-of-a11y .pillars-of-a11y__content {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(110px, 1fr)); }
 
 /*********************************************
  * GLOBAL STYLES

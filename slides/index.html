@@ -116,7 +116,7 @@
 					<section>
 						<div>
 							<blockquote>
-								 "Yes. [The Internet is] an essential tool. And, literally, a lifeline for many disabled people... Many disabled people have to spend long hours alone. Voice-activated computers are a means of communication
+								"Yes. [The Internet is] an essential tool. And, literally, a lifeline for many disabled people... Many disabled people have to spend long hours alone. Voice-activated computers are a means of communication
 								that can prevent a sense of isolation."
 							</blockquote>
 							<cite>- Christopher Reeve</cite>
@@ -131,36 +131,69 @@
 
 				<section>
 					<p>(Comedic Reset)</p>
-					<img style="width: 500px;" src="./resources/guy-noodle.gif" alt="guy fieri eating a noodle in reverse" />
+					<img style="width: 500px;" src="./resources/guy-noodle.gif" alt="Guy Fieri eating a noodle in reverse" />
+				</section>
+
+				<!-- Pillars of Accessible Development -->
+				<section>
+					<section>
+						<h1>So you want to be an Accessible Developer?</h1>
+					</section>
+					<section class="slide__pillars-of-a11y" data-transition="none slide-out">
+						<h2>The 3 Pillars of Accessible Programming</h2>
+						<div class="pillars-of-a11y__content">
+							<ul class="flex-row pillars fragment" data-fragment-index="1">
+								<li class="fragment highlight-current-blue grow" data-fragment-index="2">Awareness</li>
+								<li class="fragment highlight-current-blue grow" data-fragment-index="3">Context</li>
+								<li class="fragment highlight-current-blue grow" data-fragment-index="4">Empathy</li>
+							</ul>
+							<div class="grid-columns">
+								<p class="fragment fade-in-then-semi-out medium-text" data-fragment-index="2">Awareness of disabilities, available
+									technology, how assistive tech is used, and the tools available to us.</p>
+								<p class="fragment fade-in-then-semi-out medium-text" data-fragment-index="3">Realizing what we are trying to convey
+									to the end user in the given context.</p>
+								<p class="fragment fade-in-then-semi-out medium-text" data-fragment-index="4">Putting one's self in the shoes of a
+									differently abled person, so we may create more tailored experiences</p>
+							</div>
+						</div>
+						<aside class="notes">
+							Accessible development isn't about just following checklists and technical specs. It's just a change in mindset when creating digital experiences.
+
+							For the change in perspective, there are 3 main things one needs to be effective at a11y development. I call them the "3 Pillars of A11y Programming".
+
+							...
+
+							The goal of my talk is to provide more awareness and to give context to potential problems, but empathy must come from within.
+						</aside>
+					</section>
 				</section>
 
 				<!-- Common Confusions -->
 				<section>
 					<section>
-							<h1>Common Confusions</h1>
-							<div>
-								<img class="" src="./resources/confused-dogs.webp" alt="confused puppies">
-							</div>
-							<p class="large-text">🤷‍🤔🤦‍</p>
+						<h1>Common Questions</h1>
+						<div>
+							<img class="" src="./resources/confused-dogs.webp" alt="confused puppies">
+						</div>
 					</section>
 					<section>
-						<h1>WTF is A11y?!?</h1>
+						<h2>WTF is A11y?!?</h2>
 						<p class="fragment"><em>A11y</em> is a numeronym that stands for accessibility.</p>
 						<aside class="notes">
 							A11y is a numeronym that stands for accessibility. Which leads to my next question...
 						</aside>
 					</section>
 					<section>
-						<h1>WTF is a Numeronym?!?</h1>
-						<p class="fragment"><em>Numeronym</em> is where you use numbers to represent the middle of a long word</p>
-						<p class="fragment">A ... 11 letters ... y</p>
-						<div class="fragment flex-column content-center">
+						<h2>WTF is a Numeronym?!?</h2>
+						<p class="fragment" data-fragment-index="1"><em>Numeronym</em> is where you use numbers to represent the middle of a long word</p>
+						<p class="fragment" data-fragment-index="2">A ... 11 letters ... y</p>
+						<div class="fragment flex-column content-center" data-fragment-index="2">
 							<img style="width:300px;" src="./resources/a11y.png" alt="diagram of how a11y the numeronym works">
 							<p class="small-text">Image provided by <a href="http://mds.is/a11y">MDS</a></p>
 						</div>
 					</section>
 					<section>
-						<h2>Other examples</h2>
+						<h3>Other examples</h3>
 						<ul>
 							<li class="fragment">Internationalization (I18n)</li>
 							<li class="fragment">Localization (L10n)</li>
@@ -170,16 +203,16 @@
 						</div>
 					</section>
 					<section>
-						<h1>WCAG, 508, Lawsuits?</h1>
+						<h2>WCAG, 508, Lawsuits?</h2>
 						<div class="fragment">
 							<img style="width: 700px;" src="./resources/oh-my.webp" alt="George Takai saying 'Oh My'">
 						</div>
 						<aside class="notes">
-							I'm not going to go into super detail about these topics, but...
+							I'm not going to go into super detail about these topics, but I'll hit the main points.
 						</aside>
 					</section>
 					<section>
-						<h2>WCAG</h2>
+						<h3>WCAG</h3>
 						<p class="fragment"><strong>Web Content Accessibility Guidelines</strong></p>
 						<p class="fragment">The official guidelines published by the W3C on how to make the web accessible.</p>
 						<div class="fragment">
@@ -193,7 +226,68 @@
 						</aside>
 					</section>
 					<section>
-						<h3>WCAG A, AA, AAA</h3>
+						<h4>P.O.U.R</h4>
+						<div class="flex-row justify-space-around">
+							<p class="fragment">Perceivable</p>
+							<p class="fragment">Operable</p>
+							<p class="fragment">Understandable</p>
+							<p class="fragment">Robust</p>
+						</div>
+					</section>
+					<section>
+						<h5>Perceivable</h5>
+						<p>
+							Available to the senses either through the browser or through assistive technologies.
+						</p>
+						<aside class="notes">
+							Mainly through vision and hearing.
+
+							Assistive technologies include screen readers, screen enlargers, audio captions, etc.
+						</aside>
+					</section>
+					<section>
+						<h5>Operable</h5>
+						<p>
+							Users can interact with all controls and interactive elements using either the mouse, keyboard, or an assistive device.
+						</p>
+						<aside class="notes">
+						</aside>
+					</section>
+					<section>
+						<h5>Understandable</h5>
+						<p>
+							Content is clear and limits confusion and ambiguity.
+						</p>
+						<div class="flex-row justify-space-around">
+							<div>
+								<h6>Good Example</h6>
+								<img class="medium-img" src="./resources/good-dialog-example.png" alt="modal with explicit actions for its buttons">
+							</div>
+							<div>
+								<h6>Bad Example</h6>
+								<img class="medium-img" src="./resources/bad-dialog-example.png" alt="modal with ambiguous actions for its buttons">
+							</div>
+						</div>
+						<p class="small-text">Image Source:
+							<a href="https://material.io/guidelines/components/dialogs.html#dialogs-alerts">Material.io</a></p>
+						<aside class="notes">
+							In this example the second modal has ambiguous actions for the confirmation buttons, while the first is very explicit.
+						</aside>
+					</section>
+					<section>
+						<h5>Robust</h5>
+						<p>
+							A wide range of technologies and devices can access the content.
+						</p>
+
+						<aside class="notes">
+							Our sites need to be robust enough to be used in various contexts such as screen readers, screen enlargers, switches, etc.
+
+							An easy to to ensure this is to give many ways to accomplish common tasks like page navigation and search.
+						</aside>
+					</section>
+					<section>
+						<h4>A, AA, AAA, AAAHHHHHH!</h4>
 						<p class="fragment">The <em>As</em> are a levels of conformance to the WCAG</p>
 						<aside class="notes">
 							The way I think about the levels of conformance is.
@@ -204,7 +298,7 @@
 						</aside>
 					</section>
 					<section>
-						<h4>A</h4>
+						<h5>Level A</h5>
 						<p>The very minimum needed, so that a website is usable for people with assistive technology</p>
 						<p class="fragment">
 							<img style="width: 350px" src="./resources/a-car.jpg" alt="junker car with duck tape"><br />
@@ -213,11 +307,11 @@
 						<aside class="notes">
 							You can think a junker car with a manual transmission.
 
-							It'll get you from point A to B, but it might be a bumpy experience if you don't know exactly what you're looking for.
+							It'll get you from point A to B, but it might be a bumpy experience especially if you don't already know how to use it.
 						</aside>
 					</section>
 					<section>
-						<h4>AA</h4>
+						<h5>Level AA</h5>
 						<p>What is needed for a good user experience in most cases</p>
 						<p class="fragment">
 							<img src="./resources/aa-car.jpg" alt="a typical sedan"><br />
@@ -230,8 +324,8 @@
 						</aside>
 					</section>
 					<section>
-						<h4>AAA</h4>
-						<p>Very helpful in certain circumstances, but can sometimes be either excessive or impractical.</p>
+						<h5>Level AAA</h5>
+						<p>Very helpful in certain circumstances, but are either excessive or impractical in other cases.</p>
 						<p class="fragment">
 							<img style="width: 400px" src="./resources/aaa-car.webp" alt="soldiers dancing around moving humvee in the desert"><br />
 							A Humvee
@@ -242,109 +336,57 @@
 							Useful when you need to drive over walls, but isn't always necessary for day to day use.
 						</aside>
 					</section>
-				</section>
-
-				<section>
-					<h1>Slides</h1>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="https://slides.com"
-						 target="_blank">https://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h1>Point of View</h1>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt
-						+ click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h1>Touch Optimized</h1>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-				<section data-markdown>
-					<pre>
-					<code data-javascript data-trim data-noescape>
-						(function( root, factory ) {
-							if (typeof define === 'function' && define.amd) {
-								root.marked = require( './marked' );
-								root.RevealMarkdown = factory( root.marked );
-								root.RevealMarkdown.initialize();
-							} else if( typeof exports === 'object' ) {
-								module.exports = factory( require( './marked' ) );
-							} else {
-								// Browser globals (root is window)
-								root.RevealMarkdown = factory( root.marked );
-								root.RevealMarkdown.initialize();
-							}
-						}
-					</code>
-									</pre>
-					<!-- <script type="text/template">
-										## Markdown support
-
-										Write content using inline or external Markdown.
-										Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-										```
-										<section data-markdown>
-										  ## Markdown support
-
-										  Write content using inline or external Markdown.
-										  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-										</section>
-										```
-									</script> -->
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h1>Fragments</h1>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
+					<section>
+						<h3>Section 508</h3>
+						<p class="fragment">Section 508 of the 1973 Rehabilitation Act</p>
+						<p class="fragment">
+							<br />
+							As of January 2018...
+							<br />
+							<br />
+						<span class="large-text">Section 508 == WCAG AA</span>
+						</p>
 						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
+							The 1973 Rehabilitation Act layed a lot of the ground work of anti-discrimination legislation against people with disabilities.
+
+							Section 508 used to be its own standard that you had to conform to, but as of January 2018, Section 508 and WCAG AA are the same!
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Types of Disabilities</h1>
+						<div class="flex-row justify-space-around">
+							<p class="fragment">Motor</p>
+							<p class="fragment">Cognitive</p>
+							<p class="fragment">Visual</p>
+						</div>
+						<br>
+						<br>
+						<div class="flex-row justify-space-around">
+							<p class="fragment">Auditory</p>
+							<p class="fragment">Neurological</p>
+							<p class="fragment">Temporary</p>
+						</div>
+						<aside class="notes">
+							Just want to give a shout out to Web AIM for their in depth analysis of each type of disability.
 						</aside>
 					</section>
 					<section>
-						<h1>Fragment Styles</h1>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p>
-							<span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
-							<span style="display: inline-block;" class="fragment fade-up">up, </span>
-							<span style="display: inline-block;" class="fragment fade-down">down, </span>
-							<span style="display: inline-block;" class="fragment fade-left">left</span>
-						</p>
-						<p class="fragment fade-in-then-out">fade-in-then-out</p>
-						<p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
-						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span
-							 class="fragment highlight-green">green</span></p>
+						<!-- TODO: Add sections about the assistive tech used for each disability -->
+						<!-- TODO: Section on Accessibility Tree -->
+						<!-- TODO: Section on Easy A11y wins-->
+						<!-- TODO: Section on Tools available-->
+						<!-- TODO: Add interactive section about certain circumstances and have the audience come up with solutions -->
+						<h2>Motor</h2>
+						<ul class="">
+							<li>Paralysis</li>
+							<li>Loss or damage of limbs</li>
+							<li>Muscular Dystrophy</li>
+							<li>Tremors</li>
+						</ul>
 					</section>
-				</section>
-
-				<section id="transitions">
-					<h1>Transition Styles</h1>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
 				</section>
 		</div>
 
