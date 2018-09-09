@@ -199,6 +199,39 @@ section.has-light-background {
 		}
 	}
 
+	.slide__disability-type {
+		.list {
+			p {
+				max-width: 400px;
+				text-align: center;
+				align-self: center;
+			}
+		}
+	}
+
+	.slide__assistive-tech {
+		.tools {
+			margin: 50px auto;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			grid-gap: 30px;
+			justify-content: center;
+			align-items: center;
+			h4 {
+				&::before {
+					content: '';
+				}
+			}
+			.tool {
+				max-width: 300px;
+				min-height: 300px;
+				img {
+					display: block;
+				}
+			}
+		}
+	}
+
 }
 
 // ---------------------------------------------

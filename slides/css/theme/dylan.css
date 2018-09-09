@@ -115,6 +115,26 @@ section.has-light-background, section.has-light-background h1, section.has-light
   display: grid;
   grid-template-rows: repeat(auto-fill, minmax(110px, 1fr)); }
 
+.reveal .slide__disability-type .list p {
+  max-width: 400px;
+  text-align: center;
+  align-self: center; }
+
+.reveal .slide__assistive-tech .tools {
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+  justify-content: center;
+  align-items: center; }
+  .reveal .slide__assistive-tech .tools h4::before {
+    content: ''; }
+  .reveal .slide__assistive-tech .tools .tool {
+    max-width: 300px;
+    min-height: 300px; }
+    .reveal .slide__assistive-tech .tools .tool img {
+      display: block; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
