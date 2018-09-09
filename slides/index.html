@@ -534,18 +534,6 @@
 							<p class="fragment">Visual Comprehension</p>
 						</div>
 					</section>
-					<!-- <section class="slide__assistive-tech">
-						<h3>Design Patterns for Cognitive Disabilities</h3>
-						<div class="tools" style="grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));">
-							<div class="fragment tool">
-								<h4 class="small-text">Keeping Labels Close and Persistent</h4>
-								<img src="./resources/labels.gif" alt="Animation of placeholder becoming an input label" class="small-img">
-								<a href="https://uxcellence.com/2018/accessible-forms" class="small-text">UXcellence</a>
-						</div>
-						<aside class="notes">
-							A lot of the design patters for Cognitive disabilities are just good practices for UX in general
-						</aside>
-					</section> -->
 					<section class="slide__disability-type">
 						<h2>Neurological</h2>
 						<div style="margin: 75px auto;" class="flex-row justify-space-around list">
@@ -570,6 +558,127 @@
 							<p class="fragment">Reading phone in bright sunlight</p>
 							<p class="fragment">Watching Netflix in class</p>
 						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>How does assistive tech work with websites?</h1>
+					</section>
+					<section>
+						<h2>Accessibility Tree</h2>
+						<div class="fragment">
+							<p>A tree representation of the webpage that contains all meta-data about every page element.</p>
+							<div>
+								<img src="./resources/a11y-tree.png" alt="Accessibility Tree of a form">
+							</div>
+						</div>
+						<aside class="notes">
+							What the browser does is when it parses an HTML document, it creates both the DOM and the Accessibility Tree.
+						</aside>
+					</section>
+					<section>
+						<h3>What Assistive Tech Sees from the Tree</h3>
+						<div class="flex-row justify-space-around">
+							<p class="fragment">
+								Name
+							</p>
+							<p class="fragment">
+								State
+							</p>
+							<p class="fragment">
+								Role
+							</p>
+							<p class="fragment">
+								Value
+							</p>
+						</div>
+					</section>
+					<section>
+						<h3>How can I create a great A11y tree?</h3>
+						<p class="fragment">By utilizing HTML Semantic Elements!</p>
+						<div class="flex-row justify-space-around">
+							<p class="fragment">
+								&lt;nav&gt;
+							</p>
+							<p class="fragment">
+								&lt;button&gt;
+							</p>
+							<p class="fragment">
+								&lt;section&gt;
+							</p>
+							<p class="fragment">
+								&lt;h1&gt;
+							</p>
+						</div>
+						<aside class="notes">
+							Because HTML is accessible by default!
+
+							Semantic HTML tags already have meaning associated with them.
+						</aside>
+					</section>
+					<section>
+						<h3>Examples of HTML Semantics</h3>
+
+						<div class="fragment flex-column">
+							<h4>Headers</h4>
+							<p class="fragment">Headers convey page the page's hierarchy.</p>
+							<div class="fragment">
+								<img class="medium-img" src="resources/heading-rotor.png" alt="Viewing page hierarchy with Page Rotor">
+							</div>
+							<p class="fragment">Assistive tech generally has short cuts that allow the user to see an overview of the page structure and to navigate to the heading they're looking for</p>
+						</div>
+					</section>
+					<section>
+						<h3>Examples of HTML Semantics</h3>
+
+						<div class="fragment flex-column">
+							<h4>Buttons</h4>
+							<p class="fragment">Is focusable</p>
+							<p class="fragment">Has all event handlers synthetic clicks</p>
+							<div class="fragment">
+								<img class="medium-img" src="resources/focus-ring-button.png" alt="Focus ring around button">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h3>ARIA</h3>
+						<p class="fragment">Attributes used to modify the A11y Tree</p>
+						<p class="fragment">Surgeon's Scalpel</p>
+					</section>
+					<section>
+						<h4>Examples of ARIA Modifications</h4>
+						<div class="flex-row justify-space-around list">
+							<p class="fragment">Label</p>
+							<p class="fragment">Role</p>
+							<p class="fragment">Associated Elements</p>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Easy A11y Wins</h1>
+					</section>
+					<section>
+						<h2>Use Semantic HTML Tags</h2>
+						<p class="fragment">They're accessible by default</p>
+					</section>
+					<section>
+						<h3>What about custom elements?</h3>
+						<p class="fragment">Start with a regular HTML element</p>
+						<p class="fragment">Use ARIA tags to modify the difference</p>
+					</section>
+					<section>
+						<h4>Example: Toggle Element</h4>
+						<ol>
+							<li class="fragment">Start with a button tag</li>
+							<li class="fragment">Add ARIA role of "switch"</li>
+							<li class="fragment">Give it the ARIA property of "aria-checked"</li>
+						</ol>
+						<pre class="html fragment">
+							<code>
+<button role="switch" aria-checked="true">Enable</button>
+							</code>
+						</pre>
 					</section>
 				</section>
 		</div>
