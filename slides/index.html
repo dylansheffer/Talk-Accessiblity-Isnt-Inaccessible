@@ -61,7 +61,6 @@
 				<section>
 					<div class="">
 						<h1>Accessibility Isn't Inaccessible!</h1>
-						<p>A dive into how web accessibility <br/> doesn't have to be so confusing!</p>
 						<span class="large-text">🎉♿🎉</span>
 					</div>
 					<aside class="notes">
@@ -592,7 +591,15 @@
 								Value
 							</p>
 						</div>
-					</section>
+					</p>
+				</section>
+				<section>
+					<div>
+						<img src="./resources/a11y-tree-presentation.PNG" alt="Developer Tools Showing A11y Tree">
+					</div>
+					<p class="small-text">You can inspect the a11y tree properties with <a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en">Google's Accessibility Tools Plugin</a>
+
+				</section>
 					<section>
 						<h3>How can I create a great A11y tree?</h3>
 						<p class="fragment">By utilizing HTML Semantic Elements!</p>
@@ -617,27 +624,15 @@
 						</aside>
 					</section>
 					<section>
-						<h3>Examples of HTML Semantics</h3>
+						<h3>Why HTML Semantics Matters</h3>
 
 						<div class="fragment flex-column">
-							<h4>Headers</h4>
-							<p class="fragment">Headers convey page the page's hierarchy.</p>
+							<h4 class="no-markdown">Heading</h4>
+							<p class="fragment">Headings convey page the page's hierarchy.</p>
 							<div class="fragment">
 								<img class="medium-img" src="resources/heading-rotor.png" alt="Viewing page hierarchy with Page Rotor">
 							</div>
-							<p class="fragment">Assistive tech generally has short cuts that allow the user to see an overview of the page structure and to navigate to the heading they're looking for</p>
-						</div>
-					</section>
-					<section>
-						<h3>Examples of HTML Semantics</h3>
-
-						<div class="fragment flex-column">
-							<h4>Buttons</h4>
-							<p class="fragment">Is focusable</p>
-							<p class="fragment">Has all event handlers synthetic clicks</p>
-							<div class="fragment">
-								<img class="medium-img" src="resources/focus-ring-button.png" alt="Focus ring around button">
-							</div>
+							<p class="fragment">Shortcuts to see an overview of the page structure and to navigate to the desired heading</p>
 						</div>
 					</section>
 					<section>
@@ -646,12 +641,24 @@
 						<p class="fragment">Surgeon's Scalpel</p>
 					</section>
 					<section>
-						<h4>Examples of ARIA Modifications</h4>
-						<div class="flex-row justify-space-around list">
-							<p class="fragment">Label</p>
-							<p class="fragment">Role</p>
-							<p class="fragment">Associated Elements</p>
-						</div>
+						<h4>What ARIA Does</h4>
+						<ul>
+							<li class="fragment">Modifies the accessibility tree by adding semantics</li>
+							<li class="fragment">Modifies existing semantics</li>
+							<li class="fragment">Express UI Patterns</li>
+							<li class="fragment">Add extra labels and descriptions</li>
+							<li class="fragment">Establishing relationships between elements</li>
+							<li class="fragment">Live Updates to a page</li>
+						</ul>
+					</section>
+					<section>
+						<h4>What ARIA Does Not Do</h4>
+						<ul>
+							<li class="fragment">Modify an element’s appearance</li>
+							<li class="fragment">Add focusability (tabbing)</li>
+							<li class="fragment">Add keyboard event handling</li>
+						</ul>
+						<p class="fragment"><em>Those are added in via CSS and Javascript</em></p>
 					</section>
 				</section>
 				<section>
@@ -661,6 +668,21 @@
 					<section>
 						<h2>Use Semantic HTML Tags</h2>
 						<p class="fragment">They're accessible by default</p>
+						<p class="fragment">A lot of work must be done to make elements from scratch</p>
+					</section>
+					<section>
+						<h3>Button</h3>
+						<p class="fragment">We miss out on all the affordances (expected behavior) of a button</p>
+						<ul>
+							<li class="fragment">Styles for each button state <br> (pressed, disabled, etc)</li>
+							<li class="fragment">Not tabable (focusable)</li>
+							<li class="fragment">Can't be triggered by synthetic clicks <br> (spacebar, enter, etc)</li>
+							<li class="fragment">Announced by a screen reader incorrectly</li>
+						</ul>
+					</section>
+					<section>
+						<p class="large-text">If we make a custom element, we must add back ALL expected functionality</p>
+						<a href="https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex" class="fragment medium-text">Guideline Here</a>
 					</section>
 					<section>
 						<h3>What about custom elements?</h3>
@@ -675,11 +697,77 @@
 							<li class="fragment">Give it the ARIA property of "aria-checked"</li>
 						</ol>
 						<pre class="html fragment">
-							<code>
-<button role="switch" aria-checked="true">Enable</button>
-							</code>
+							<code class="large-text"><button role="switch" aria-checked="false">Enable</button></code>
 						</pre>
 					</section>
+					<section>
+						<h2>Ensure Proper Contrast and Text Size</h2>
+						<div><img src="./resources/contrast.png" alt="demonstration of good and bad color contrast"></div>
+						<a href="https://uxplanet.org/accessible-interface-design-3c59ee3ec730" class="small-text">UX Planet</a>
+						<p class="fragment">Easier for everyone using the site!</p>
+					</section>
+					<section>
+						<h2>Structure Document in Logical DOM Order</h2>
+						<p class="fragment">Assistive Tech reads the page from top to bottom</p>
+						<p class="fragment">Very confusing to watch the focus ring jump around the page</p>
+						<p class="fragment"><b>Note:</b> CSS Does NOT change the order of elements for assistive tech</p>
+					</section>
+					<section>
+						<h2>Add Contextual Captions to Icons and Images</h2>
+						<p class="fragment">Icons without a label do not mean anything to screen readers</p>
+						<!-- <pre class="fragment html"><code class="large-text"><i class="fa fa-home" aria-label="Home"></i></code></pre> -->
+						<p class="fragment">Image alt text needs to reflect the context</p>
+						<div class="fragment">
+							<img class="small-img" src="./resources/scary-dog.jpg" alt="Dogs in ghost costumes">
+							<p style="margin: 0;"><a class="small-text" href="https://www.wideopenpets.com/11-pets-looking-not-so-scary-in-their-scary-halloween-costumes/">Wide Open Pets</a></p>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Testing</h1>
+					</section>
+					<section>
+						<h2>Automated Testing</h2>
+						<p class="fragment">Great for picking out low hanging fruit</p>
+						<ul>
+							<li class="fragment">Deque's aXe plugin</li>
+							<li class="fragment">Google Chrome Lighthouse</li>
+							<li class="fragment">ESLint Packages</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Manual Testing</h2>
+						<p class="fragment">Necessary because some things can't be automated</p>
+						<ul>
+							<li class="fragment">Focus Ring</li>
+							<li class="fragment">Color contrast of text on images</li>
+							<li class="fragment">Screen Readers</li>
+							<li class="fragment">Usability</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h1>Tools and Resources</h1>
+					<ul>
+						<li class="small-text"><a href="https://webaim.org/">WebAIM - Excellent Guides and Articles</a></li>
+						<li class="small-text"><a href="https://www.deque.com/">Excellent Tools, webinars, guides, podcasts, etc</a></li>
+						<li class="small-text"><a href="https://www.youtube.com/watch?v=Ag3DMNbL_ig&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g">A11y Cast with Rob Dodson</a></li>
+						<li class="small-text"><a href="https://developers.google.com/web/fundamentals/accessibility/">Google Developer Accessibility Docs</a></li>
+						<li class="small-text"><a href="https://ebay.gitbooks.io/oatmeal/content/">OATMEAL - EBay's Open Accessibility Guidelines</a></li>
+						<li class="small-text"><a href="https://a11yproject.com/checklist">A11y Project - Beginners Checklist</a></li>
+						<li class="small-text"><a href="https://www.deque.com/axe/">aXe Accessibility Audit Plugin</a></li>
+						<li class="small-text"><a href="https://squizlabs.github.io/HTML_CodeSniffer/">HTML Code Sniffer</a></li>
+						<li class="small-text"><a href="https://incl.ca/archives/">Part of a Whole Blog</a></li>
+						<li class="small-text"><a href="https://inclusive-components.design/">Inclusive Components</a></li>
+						<li class="small-text"><a href="https://ui.reach.tech/">Reach - Accessible React Components</a></li>
+						<li class="small-text"><a href="https://bulbenergy.github.io/bulb-audit/">Bulb Audit - Open Sourced Professional A11y Audit</a></li>
+						<li class="small-text"><a href="http://colorsafe.co/">Color Safe - A11y Color Pallet Generator</a></li>
+						<li class="small-text"><a href="https://accessibility.18f.gov/">18f - A11y Guide</a></li>
+					</ul>
+				</section>
+				<section>
+					<h1>Thank You!</h1>
 				</section>
 		</div>
 

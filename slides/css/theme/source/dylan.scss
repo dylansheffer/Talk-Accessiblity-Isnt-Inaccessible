@@ -88,6 +88,27 @@ section.has-light-background {
 		color: $purple-color;
 	 }
 
+	 h1.no-markdown {
+		&::before {
+			content: "";
+		}
+	 }
+	h2.no-markdown {
+		&::before {
+			content: "";
+		}
+	 }
+	h3.no-markdown {
+		&::before {
+			content: "";
+		}
+	 }
+	h4.no-markdown {
+		&::before {
+			content: "";
+		}
+	 }
+
 	pre {
 		border-style: solid;
 		border-width: 46px;
@@ -95,6 +116,10 @@ section.has-light-background {
 		font-size: 110%;
 		border-radius: 24px;
 		width: 80%;
+	}
+
+	code {
+		overflow: auto;
 	}
 
 	img {
