@@ -66,6 +66,16 @@
 				</section>
 
 				<section>
+					<h1>Overview</h1>
+					<ol>
+						<li class="fragment">What it is and why it is important</li>
+						<li class="fragment">Foundational knowledge</li>
+						<li class="fragment">How assistive tech interprets our sites</li>
+						<li class="fragment">My way of approaching accessibility design problems</li>
+					</ol>
+				</section>
+
+				<section>
 					<section>
 						<div>
 							<h1>What is Accessibility?</h1>
@@ -74,7 +84,53 @@
 					<section>
 						<div>
 							<blockquote>Making your site usable by everybody regardless of ability.</blockquote>
+							<div class="flex-row justify-space-around">
+								<p class="fragment">Increase <br> Customer Pool</p>
+								<p class="fragment">No Lawsuits</p>
+								<p class="fragment">Better UX</p>
+							</div>
 						</div>
+						<aside class="notes">
+							Making your site usable for everyone has many benefits outside of creating a more inclusive experience.
+							<br>
+							There are also...
+							<ol>
+								<li>financial benefits from increasing potential customer base</li>
+								<li>removes the possibility of a lawsuit for discriminatory practices</li>
+								<li>increases the overall usability of your site</li>
+							</ol>
+						</aside>
+					</section>
+					<section class="slide__pillars-of-a11y" data-transition="none slide-out">
+						<h2>The 3 Pillars of Accessible Programming</h2>
+						<br>
+						<div class="pillars-of-a11y__content fragment" data-fragment-index="1">
+							<!-- <ul class="flex-row pillars fragment" data-fragment-index="1"> -->
+								<p class="fragment highlight-current-blue grow" data-fragment-index="2">Awareness</p>
+								<p class="fragment highlight-current-blue grow" data-fragment-index="3">Context</p>
+								<p class="fragment highlight-current-blue grow" data-fragment-index="4">Empathy</p>
+							<!-- </ul> -->
+							<!-- <div class=""> -->
+								<p class="fragment fade-in-then-semi-out medium-text" data-fragment-index="2">Awareness of disabilities, available
+									technology, how assistive tech is used, and the tools available to us.</p>
+								<p class="fragment fade-in-then-semi-out medium-text" data-fragment-index="3">Realizing what we are trying to convey
+									to the end user in the given context.</p>
+								<p class="fragment fade-in-then-semi-out medium-text" data-fragment-index="4">Putting one's self in the shoes of
+									different people, so we may create more tailored experiences</p>
+							<!-- </div> -->
+						</div>
+						<aside class="notes">
+							Accessible development isn't about just following checklists and technical specs. It's just a change in mindset when creating digital experiences.
+
+							For the change in perspective, there are 3 main things one needs to be effective at a11y development. I call them the
+							"3 Pillars of A11y Programming".
+							<br>
+							<br>
+							...
+							<br>
+							<br>
+							The goal of my talk is to provide more awareness and to give context to potential problems, but empathy must come from within.
+						</aside>
 					</section>
 				</section>
 
@@ -87,9 +143,10 @@
 						<p class="large-text ">It is critical we do this right</p>
 						<aside class="notes">
 							<ul>
-								<li> A11y isn't something we can debate about doing like how we can endlessly debate about the latest javascript framework or programming paradigm.</li>
-								<li> This is something that everybody has to take seriously. It is all of our responsibility as developers to ensure that we preserve the fundamental human right of access to information and self expression for everybody that uses it.</li>
-								<li> Remember that all of us are only an accident or a few years of age from needing to use assistive technology, so if you enjoy being able to freely use the web and would want to do that for the rest of your life, prioritize accessibility.</li>
+								<li>A11y isn't something we can debate about doing like using the latest javascript framework or using a new programming pattern.</li>
+								<li>It is all of our responsibility, as developers, that we ensure the preservation of a fundamental human right. The access to information and self expression.</li>
+								<li>Remember that all of us are only an accident or a few years of age from needing assistive technology in order live an independent lifestyle.</li>
+								<li>Let's at least ensure the infrastructure we have control over can accommodate everybody.</li>
 							</ul>
 						</aside>
 					</section>
@@ -118,7 +175,7 @@
 							If you're struggling understanding what the WCAG is saying checkout the website webaim.org. It has a more digestible checklist of the WCAG.
 							<br>
 							<br>
-							... Without going into the specifics, the WCAG is just trying to make sure our sites are P.O.U.R
+							... The main idea of the WCAG is that we need to make our websites P.O.U.R
 						</aside>
 					</section>
 					<section>
@@ -154,7 +211,7 @@
 						<p>
 							Content is clear and limits confusion and ambiguity.
 						</p>
-						<div class="flex-row justify-space-around">
+						<!-- <div class="flex-row justify-space-around">
 							<div>
 								<h6>Good Example</h6>
 								<img class="medium-img" src="./resources/good-dialog-example.png" alt="modal with explicit actions for its buttons">
@@ -165,9 +222,9 @@
 							</div>
 						</div>
 						<p class="small-text">Image Source:
-							<a href="https://material.io/guidelines/components/dialogs.html#dialogs-alerts">Material.io</a></p>
+							<a href="https://material.io/guidelines/components/dialogs.html#dialogs-alerts">Material.io</a></p> -->
 						<aside class="notes">
-							In this example the second modal has ambiguous actions for the confirmation buttons, while the first is very explicit.
+							This includes using explicit language for dialog actions, using simple language for content, and to not completely rely on metaphors like icons and changing colors for information.
 						</aside>
 					</section>
 					<section>
@@ -184,6 +241,7 @@
 					</section>
 				</section>
 
+				<!-- Types of Disabilities -->
 				<section>
 					<!-- <section>
 						<p>Thank You WebAIM!</p>
@@ -235,7 +293,7 @@
 					<section class="slide__assistive-tech">
 						<h3>Assistive Tech for Motor Disabilities</h3>
 
-						<div class="tools">
+						<div class="tools" style="grid-template-columns: 1fr 1fr 1fr 1fr 1fr;">
 							<div class="tool">
 								<h4 class="small-text">Mouth Stick</h4>
 								<img src="./resources/mouth-stick.jpg" alt="Girl using a mouth stick" class="small-img">
@@ -263,7 +321,6 @@
 							</div>
 						</div>
 						<aside class="notes">
-							I list out the different assistive tech that is used because I find it helpful to understand how people may interact with our websites.
 						</aside>
 					</section>
 					<!-- <section>
@@ -288,7 +345,6 @@
 					</section>
 					<section>
 						<h3>Accessibility Principles to Focus On</h3>
-						<br>
 						<div class="fragment">
 							<p class="large-text">Perceivable</p>
 							<p>Cannot see visual information such as graphics, layout, or color-based cues</p>
@@ -297,32 +353,32 @@
 						<div class="fragment">
 							<p class="large-text">Operable</p>
 							<p>Usually depend on a keyboard to navigate web content functionality, rather than a mouse</p>
+							<p class="small-text">
+								continued...
+							</p>
 						</div>
-						<br>
-						<p class="small-text fragment">
-							continued...
-						</p>
 					</section>
 					<section>
 						<h3>Accessibility Principles to Focus On</h3>
-						<br>
 						<div>
 							<p class="large-text">Understandable</p>
-							<p>Cannot understand content that is presented in an illogical linear order, or which contains extraneous text not
-								meant to be read word for word or character by character</p>
-							<p class="medium-text">Example: Web Addresses</p>
+							<p>Cannot understand content that is presented in an illogical linear order</p>
+							<p>Contains text not meant to be read word for word</p>
 						</div>
-						<br>
 						<div>
 							<p class="large-text">Robust</p>
-							<p>Assistive technologies used by the blind are not always capable of accessing a broad range of technologies</p>
-							<p class="medium-text">Example: Browsers, New ARIA Features</p>
+							<p>Not always capable of accessing a broad range of technologies</p>
 						</div>
+						<aside class="notes">
+							Understandable Examples: Web Addresses, putting content in weird DOM orders
+							<br>
+							Robust Examples: Browsers, new ARIA features
+						</aside>
 					</section>
 					<section class="slide__assistive-tech flex-column content-center">
 						<h3>Assistive Tech for Visual Disabilities</h3>
 
-						<div class="tools" style="grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));">
+						<div class="tools" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
 							<div class="tool">
 								<h4 class="small-text">Braille Readers</h4>
 								<img src="./resources/braille-reader.jpg" alt="Person using Braille Reader" class="small-img">
@@ -351,7 +407,7 @@
 						<h2>Auditory</h2>
 						<div class="flex-row justify-space-around list">
 							<p class="fragment">Conductive Hearing Loss</p>
-							<p class="fragment">Neural hearing loss (nerve deafness)</p>
+							<p class="fragment">Neural hearing loss</p>
 						</div>
 						<br>
 						<br>
@@ -432,15 +488,15 @@
 						<div class="fragment">
 							<p class="large-text">Operable</p>
 							<p>Shouldn't depend on remembering information</p>
+							<p class="small-text">continued...</p>
 						</div>
-						<p class="small-text fragment">continued...</p>
 					</section>
 					<section>
 						<h3>Accessibility Principles to Focus On</h3>
 						<br>
 						<div class="fragment">
 							<p class="large-text">Understandable</p>
-							<p>Not able to understand what an Icon represents on a page.</p>
+							<p>Not able to understand what an icon represents on a page.</p>
 						</div>
 						<br>
 						<div class="fragment">
@@ -451,6 +507,7 @@
 							The best way to optimize for cognitive disabilities is to
 							<ul>
 								<li>provide many different ways to accomplish the important tasks on the website</li>
+								<li>present information in a few different ways</li>
 							</ul>
 						</aside>
 					</section>
@@ -458,11 +515,11 @@
 						<h2>Neurological</h2>
 						<div style="margin: 75px auto;" class="flex-row justify-space-around list">
 							<div class="flex-column">
-								<h3 class="fragment" data-fragment-index="1">Epilepsy</h3>
+								<h3 class="fragment" data-fragment-index="1">Seizures</h3>
 								<p class="fragment" data-fragment-index="3">Avoid flashing between high contrast colors quickly</p>
 							</div>
 							<div class="flex-column">
-								<h3 class="fragment" data-fragment-index="2">Vestibular disorders</h3>
+								<h3 class="fragment" data-fragment-index="2">Vestibular <br> disorders</h3>
 								<p class="fragment" data-fragment-index="4">Avoid intense animation and paralax backgrounds</p>
 							</div>
 						</div>
@@ -493,9 +550,9 @@
 							</div>
 						</div>
 						<aside class="notes">
-							assistive tech uses the Accessibility API in order to interact with the sites
-							<br>
 							What the browser does is when it parses an HTML document, it creates both the DOM and the Accessibility Tree.
+							<br>
+							assistive tech uses the Accessibility API in order to interact with the sites
 						</aside>
 					</section>
 					<section>
@@ -555,11 +612,27 @@
 							<li class="fragment">People with Limited Dexterity</li>
 						</ul>
 						<aside class="notes">
-							This seem like a whole lot of extra work, but doing this exercise often will cover many different cases at once
-							<br>
-							It also often results in a better user experience overall
+							This seem like a whole lot of extra work, but...
+							<ul>
+								<li>like much of software testing, a lot of cases become second nature</li>
+								<li>doing this exercise often will cover many different cases at once</li>
+								<li>Often, it also results in a better user experience overall</li>
+							</ul>
 						</aside>
 					</section>
+				</section>
+				<section>
+					<p class="large-text">Accessibility isn't hard</p>
+					<ul>
+						<li class="fragment">Awareness</li>
+						<li class="fragment">Context</li>
+						<li class="fragment">Empathy</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Thank You!</h1>
+					<br>
+					<p class="large-text fragment">Questions⁉</p>
 				</section>
 				<section>
 					<h1>Tools and Resources</h1>
@@ -578,12 +651,10 @@
 						<li class="small-text"><a href="https://bulbenergy.github.io/bulb-audit/">Bulb Audit - Open Sourced Professional A11y Audit</a></li>
 						<li class="small-text"><a href="http://colorsafe.co/">Color Safe - A11y Color Pallet Generator</a></li>
 						<li class="small-text"><a href="https://accessibility.18f.gov/">18f - A11y Guide</a></li>
+						<li class="small-text"><a href="http://chromelens.xyz/">Color Blindness Simulator for Chrome</a></li>
 					</ul>
 				</section>
-				<section>
-					<h1>Thank You!</h1>
-				</section>
-		</div>
+			</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
